@@ -4,7 +4,7 @@ const Contact = () => {
     return (
         <div className='w-50 mx-auto'>
 
-            <h2 className='mt-5'>GET IN TOUCH</h2>
+            <h2 className='mt-5'>Contact Me</h2>
 
             <form>
                 <div class="form-floating mt-3">

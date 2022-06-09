@@ -14,7 +14,11 @@ const MyProjects = () => {
 
     return (
         <div className="container mt-5">
-            <div className="row text-dark">
+            <div className="row text-dark" style={{
+                marginTop: '50px', backgroundImage: `url('https://img.freepik.com/free-vector/painted-background-multicoloured-palette_23-2148427592.jpg?w=2000')`,
+                backgroundPosition: 'center',
+                backgroundSize: 'cover'
+            }}>
                 <h1 className='text-primary text-center mt-5'> My projects</h1>
                 {
                     projects.map(project => <Projects key={project.id} project={project} ></Projects>)

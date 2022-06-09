@@ -29,7 +29,11 @@ const Contact = () => {
     }
 
     return (
-        <div className='w-50 mx-auto'>
+        <div className='w-50 mx-auto container border' style={{
+            marginTop: '50px', backgroundImage: `url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000')`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover'
+        }}>
 
             <h2 className='mt-5'>Contact Me</h2>
 

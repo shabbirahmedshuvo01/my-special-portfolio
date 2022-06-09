@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <div>
+        <div style={{
+            backgroundImage: `url('https://img.freepik.com/free-vector/abstract-bokeh-lights-background_1409-1235.jpg?w=2000')`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover'
+        }}>
             <nav className='header'>
                 <h2>Hi!!!</h2>
                 <div>

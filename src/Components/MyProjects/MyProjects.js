@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Projects from '../Projects/Projects';
 import pic1 from '../../images/projects/image1 (2).jpg';
 import pic2 from '../../images/projects/image2.jpg';
@@ -6,11 +6,21 @@ import pic3 from '../../images/projects/image3.jpg';
 
 const MyProjects = () => {
 
-    const projects = [
-        { id: 1, name: 'Tools manufacturer', description: "* The project have tools guide  *and add items  * payment system", link: `https://final-project-2bb92.web.app/`, img: pic1 },
-        { id: 2, name: 'Warehouse', description: "* The book dealers page. *Add items and remove. *authentication added.", link: `https://eleven-assignment-work.web.app/`, img: pic2 },
-        { id: 3, name: 'Single man Service', description: "* A man service provide here,* Booking System.  * responsive", link: `https://my-dev-project63.web.app/`, img: pic3 },
-    ];
+    // const projects = [
+    //     { id: 1, name: 'Tools manufacturer', description: "* The project have tools guide  *and add items  * payment system", link: `https://final-project-2bb92.web.app/`, img: pic1 },
+    //     { id: 2, name: 'Warehouse', description: "* The book dealers page. *Add items and remove. *authentication added.", link: `https://eleven-assignment-work.web.app/`, img: pic2 },
+    //     { id: 3, name: 'Single man Service', description: "* A man service provide here,* Booking System.  * responsive", link: `https://my-dev-project63.web.app/`, img: pic3 },
+    // ];
+
+    const [projects, setProjects] = useState([]);
+
+
+    useEffect(() => {
+        fetch('details.json')
+            .then(res => res.json())
+            .then(data => setProjects(data))
+    }, [])
+
 
     return (
         <div className="container mt-5">

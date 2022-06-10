@@ -7,7 +7,7 @@ const Explore = () => {
     const [details, setDetails] = useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:5000/project/${detailId}`
+        const url = `https://gentle-plains-92462.herokuapp.com/project/${detailId}`
         fetch(url)
             .then(res => res.json())
             .then(data => {

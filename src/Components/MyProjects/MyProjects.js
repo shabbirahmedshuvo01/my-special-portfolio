@@ -16,7 +16,7 @@ const MyProjects = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/project')
+        fetch('https://gentle-plains-92462.herokuapp.com/project')
             .then(res => res.json())
             .then(data => setProjects(data))
     }, [])

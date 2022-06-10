@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactInfo = () => {
     return (
-        <div className='text-white text-center mt-5' style={{ height: "400px", width: "450px" }}>
+        <div className=' text-center mt-5 border' style={{ height: "400px", width: "450px" }}>
             <h3>Name : <span className='text-warning'>Shabbir Ahmed Shuvo</span></h3>
             <h4>Qualification : <span className='text-warning'>Diploma In Computer Science</span></h4>
             <h4>Institution : <span className='text-warning'>Mymensingh Polytechnic Institute</span></h4>

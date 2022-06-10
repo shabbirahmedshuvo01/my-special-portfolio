@@ -7,16 +7,32 @@ const Explore = () => {
     const [details, setDetails] = useState([]);
 
     useEffect(() => {
-        const url = `details.json/porject/${detailId}`
+        const url = `http://localhost:5000/project/${detailId}`
         fetch(url)
             .then(res => res.json())
-            .then(data => console.log(data.length))
+            .then(data => {
+                console.log(data)
+                setDetails(data)
+            });
     }, []);
 
     return (
-        <div>
-            <h2>I am here {details?.length}</h2>
-            <h2>I am here {detailId}</h2>
+        <div className='App bg-dark text-white'>
+            <h2 className='text-warning'>Pictures of {details.name}</h2>
+            <div className='App mt-5'>
+                <img style={{ width: "50rem", height: "25rem" }} src={details.ss1} alt="" />
+                <img className='mt-5' style={{ width: "50rem", height: "25rem" }} src={details.ss2} alt="" />
+                <img className='mt-5' style={{ width: "50rem", height: "25rem" }} src={details.ss3} alt="" />
+
+                <div>
+                    <h2 className='text-warning mt-5'>Codes of {details.name}</h2>
+                    <br />
+                    <h3>GitHub</h3>
+                    <h5>Client Side Code: <span className='text-warning'>Click Here</span> <span><a style={{ color: '#FFFFFF' }} href={details.gitc}><i class="fa fa-github fa-lg"></i></a></span></h5>
+                    <h5>Client Side Code: <span className='text-warning'>Click Here</span> <span><a style={{ color: '#FFFFFF' }} href={details.gits}><i class="fa fa-github fa-lg"></i></a></span></h5>
+                </div>
+
+            </div>
         </div>
     );
 };

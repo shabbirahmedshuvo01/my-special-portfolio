@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Projects = ({ project }) => {
-    const { id, name, description, link, img } = project;
+    const { _id, name, description, link, img } = project;
 
     const navigate = useNavigate();
     const navigateToDetails = id => {
@@ -19,7 +19,7 @@ const Projects = ({ project }) => {
                 </div>
                 <div className='btn-group'>
                     <a href={link} className="btn btn-primary btn-sm" >Live site</a>
-                    <button onClick={() => navigateToDetails(id)} className="btn btn-success btn-sm">Explore More</button>
+                    <button onClick={() => navigateToDetails(_id)} className="btn btn-success btn-sm">Explore More</button>
                 </div>
             </div>
         </div >

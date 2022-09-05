@@ -1,7 +1,7 @@
 import React from 'react';
 import './Banner.css'
 import shuvo from '../../images/banner/shuvo.jpg';
-import rsm from '../../images/pdf/My Resume.pdf';
+import rsm from '../../images/pdf/Resume-Updated.pdf';
 
 const Banner = () => {
     return (

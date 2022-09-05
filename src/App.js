@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import AddData from './Components/AddData';
 import Blogs from './Components/Blogs/Blogs';
 import ContactInfo from './Components/Contact/ContactInfo';
 import Explore from './Components/Explore/Explore';
@@ -18,6 +19,7 @@ function App() {
         <Route path='/projects' element={<MyProjects></MyProjects>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='porject/:detailId' element={<Explore></Explore>}></Route>
+        <Route path='/addData' element={<AddData />}></Route>
       </Routes>
       <Footer></Footer>
     </div>

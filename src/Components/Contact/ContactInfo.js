@@ -18,6 +18,7 @@ const ContactInfo = () => {
                     <a style={{ color: '#FFFFFF' }} href="https://www.instagram.com/dreamless_boy_shuvo/"><i className="fa fa-instagram fa-lg px-2"></i></a>
                     <a style={{ color: '#FFFFFF' }} href="https://www.linkedin.com/in/shabbir-ahmed-shuvo/?locale=en_US"><i className="fa fa-linkedin fa-lg px-2"></i></a>
                     <a style={{ color: '#FFFFFF' }} href="https://github.com/shabbirahmedshuvo01"><i class="fa fa-github fa-lg"></i></a>
+                    <a style={{ color: '#FFFFFF' }} href="/addData"><span className='px-2'>.</span></a>
                 </div>
             </div>
         </div>

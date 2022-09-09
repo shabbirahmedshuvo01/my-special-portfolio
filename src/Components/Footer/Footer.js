@@ -4,16 +4,45 @@ const Footer = () => {
     const date = new Date();
     let year = date.getFullYear();
     return (
-        <div className='bg-dark text-white' style={{ height: '100px' }}>
+        <div>
 
-            <div className='App p-2'>
-                <a href="https://www.facebook.com/shuvo006Shabbir"><i className="fa fa-facebook px-2" aria-hidden="true"></i></a>
-                <a href="https://www.instagram.com/dreamless_boy_shuvo/"><i className="fa fa-instagram px-2"></i></a>
-                <a href="https://www.linkedin.com/in/shabbir-ahmed-shuvo/?locale=en_US"><i className="fa fa-linkedin px-2"></i></a>
-                <a href="https://github.com/shabbirahmedshuvo01"><i class="fa fa-github"></i></a>
-            </div>
+            <footer class="bg-dark text-center text-white">
 
-            <p className='App p-3'>All Credit or copyright © deserve by Shuvo {year}</p>
+                <div class="container p-4 pb-0">
+
+                    <section class="mb-4">
+
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/shuvo006Shabbir" role="button"
+                        ><i class="fab fa-facebook-f"></i></a>
+
+
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/shabbirahmedshuvo" role="button"
+                        ><i class="fab fa-twitter"></i></a>
+
+
+                        <a class="btn btn-outline-light btn-floating m-1" href="sabbirshuvo006@gmail.com" role="button"
+                        ><i class="fab fa-google"></i></a>
+
+
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/dreamless_boy_shuvo/" role="button"
+                        ><i class="fab fa-instagram"></i></a>
+
+
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/shabbir-ahmed-shuvo/" role="button"
+                        ><i class="fab fa-linkedin-in"></i></a>
+
+
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/shabbirahmedshuvo01" role="button"
+                        ><i class="fab fa-github"></i></a>
+                    </section>
+
+                </div>
+                <div class="text-center p-3">
+                    © {year} Copyright: <a class="text-white" href="/">Shabbir Ahmed Shuvo</a>
+                </div>
+
+            </footer>
+
         </div>
     );
 };

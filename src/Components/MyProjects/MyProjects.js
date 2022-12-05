@@ -17,7 +17,7 @@ const MyProjects = () => {
 
 
     useEffect(() => {
-        fetch('https://gentle-plains-92462.herokuapp.com/project')
+        fetch('https://shuvo-here-server.onrender.com/project')
             .then(res => res.json())
             .then(data => setProjects(data))
     }, [])

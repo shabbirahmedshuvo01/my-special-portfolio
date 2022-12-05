@@ -43,7 +43,7 @@ const AddData = () => {
         }
         // console.log(feedbackDetails)
 
-        fetch('https://gentle-plains-92462.herokuapp.com/project', {
+        fetch('https://shuvo-here-server.onrender.com/project', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

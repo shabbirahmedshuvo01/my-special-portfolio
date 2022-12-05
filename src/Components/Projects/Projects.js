@@ -14,7 +14,7 @@ const Projects = ({ project }) => {
             <div className="card" style={{ width: "16rem", height: "25rem" }}>
                 <img className="card-img-top" src={img} alt="" />
                 <div className="card-body">
-                    <h5 className="card-title">Name: {name}</h5>
+                    <h5 className="card-title">{name}</h5>
                     <p className="card-text">{description}</p>
                 </div>
                 <div className='btn-group'>

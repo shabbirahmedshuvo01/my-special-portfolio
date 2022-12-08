@@ -4,6 +4,7 @@ import Fade from 'react-reveal/Fade';
 import pic1 from '../../images/projects/image1 (2).jpg';
 import pic2 from '../../images/projects/image2.jpg';
 import pic3 from '../../images/projects/image3.jpg';
+import Loading from '../Loading/Loading';
 
 const MyProjects = () => {
 
@@ -20,7 +21,11 @@ const MyProjects = () => {
         fetch('https://shuvo-here-server.onrender.com/project')
             .then(res => res.json())
             .then(data => setProjects(data))
-    }, [])
+    }, []);
+
+    if(true){
+        <Loading/>
+    }
 
 
     return (
@@ -33,10 +38,11 @@ const MyProjects = () => {
                 }}>
                     <h1 className='text-primary text-center mt-5'> My projects</h1>
                     {
-                        projects.map(project => <Projects key={project._id} project={project} ></Projects>)
+                       !projects ? <Loading/> : projects.map(project => <Projects key={project._id} project={project} ></Projects>)
                     }
                 </div>
             </Fade>
+            {/* <Loading/> */}
         </div>
     );
 };

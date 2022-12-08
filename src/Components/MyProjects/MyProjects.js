@@ -38,7 +38,7 @@ const MyProjects = () => {
                 }}>
                     <h1 className='text-primary text-center mt-5'> My projects</h1>
                     {
-                       !projects ? <Loading/> : projects.map(project => <Projects key={project._id} project={project} ></Projects>)
+                       projects.length === 0 ? <Loading/> : projects.map(project => <Projects key={project._id} project={project} ></Projects>)
                     }
                 </div>
             </Fade>

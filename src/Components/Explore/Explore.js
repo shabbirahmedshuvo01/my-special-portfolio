@@ -29,7 +29,7 @@ const Explore = () => {
                     <br />
                     <h3>GitHub</h3>
                     <h5>Client Side Code: <span className='text-warning'>Click Here</span> <span><a style={{ color: '#FFFFFF' }} href={details.gitc}><i class="fa fa-github fa-lg"></i></a></span></h5>
-                    <h5>Client Side Code: <span className='text-warning'>Click Here</span> <span><a style={{ color: '#FFFFFF' }} href={details.gits}><i class="fa fa-github fa-lg"></i></a></span></h5>
+                    <h5>Server Side Code: <span className='text-warning'>Click Here</span> <span><a style={{ color: '#FFFFFF' }} href={details.gits}><i class="fa fa-github fa-lg"></i></a></span></h5>
                 </div>
 
             </div>

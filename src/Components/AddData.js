@@ -43,7 +43,7 @@ const AddData = () => {
         }
         // console.log(feedbackDetails)
 
-        fetch('https://shuvo-here-server.onrender.com/project', {
+        fetch('https://shuvo-here-server.vercel.app/project', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

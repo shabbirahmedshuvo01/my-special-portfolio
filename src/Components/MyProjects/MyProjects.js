@@ -18,7 +18,7 @@ const MyProjects = () => {
 
 
     useEffect(() => {
-        fetch('https://shuvo-here-server.onrender.com/project')
+        fetch('https://shuvo-here-server.vercel.app/project')
             .then(res => res.json())
             .then(data => setProjects(data))
     }, []);

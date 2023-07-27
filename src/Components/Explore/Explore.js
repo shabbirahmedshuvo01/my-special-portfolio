@@ -7,7 +7,7 @@ const Explore = () => {
     const [details, setDetails] = useState([]);
 
     useEffect(() => {
-        const url = `https://shuvo-here-server.onrender.com/project/${detailId}`
+        const url = `https://shuvo-here-server.vercel.app/project/${detailId}`
         fetch(url)
             .then(res => res.json())
             .then(data => {

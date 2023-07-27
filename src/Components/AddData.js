@@ -43,7 +43,7 @@ const AddData = () => {
         }
         // console.log(feedbackDetails)
 
-        fetch('https://shuvo-here-server.vercel.app/project', {
+        fetch('https://shuvo-here-server-222.onrender.com/project', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -71,48 +71,48 @@ const AddData = () => {
         }} >
             <div className='w-50 mx-auto'>
                 <form onSubmit={handleSubmit}>
-                    <div class="form-floating mt-3">
-                        <input ref={nameRef} type="name" name="name" class="form-control" id="floatingInput" placeholder="Name" />
+                    <div className="form-floating mt-3">
+                        <input ref={nameRef} type="name" name="name" className="form-control" id="floatingInput" placeholder="Name" />
                         <label for="floatingInput">Your Name</label>
                     </div>
 
-                    <div class="form-floating mt-3">
-                        <textarea ref={descriptionRef} type="description" name='description' class="form-control" placeholder="Description" />
+                    <div className="form-floating mt-3">
+                        <textarea ref={descriptionRef} type="description" name='description' className="form-control" placeholder="Description" />
                         <label for="floatingPassword">Description</label>
                     </div>
 
-                    <div class="form-floating mt-3">
-                        <input ref={linkRef} type="text" name="link" class="form-control" id="floatingInput" placeholder="Project-Link" />
+                    <div className="form-floating mt-3">
+                        <input ref={linkRef} type="text" name="link" className="form-control" id="floatingInput" placeholder="Project-Link" />
                         <label for="floatingInput">Project Link</label>
                     </div>
 
-                    <div class="form-floating mt-3">
-                        <input ref={imgRef} type="link" name="img" class="form-control" id="floatingInput" placeholder="img" />
+                    <div className="form-floating mt-3">
+                        <input ref={imgRef} type="link" name="img" className="form-control" id="floatingInput" placeholder="img" />
                         <label for="floatingInput">Img</label>
                     </div>
 
-                    <div class="form-floating mt-3">
-                        <input ref={gitcRef} type="link" name="gitc" class="form-control" id="floatingInput" placeholder="gitc" />
+                    <div className="form-floating mt-3">
+                        <input ref={gitcRef} type="link" name="gitc" className="form-control" id="floatingInput" placeholder="gitc" />
                         <label for="floatingInput">git-client</label>
                     </div>
 
-                    <div class="form-floating mt-3">
-                        <input ref={gitsRef} type="link" name="gits" class="form-control" id="floatingInput" placeholder="gits" />
+                    <div className="form-floating mt-3">
+                        <input ref={gitsRef} type="link" name="gits" className="form-control" id="floatingInput" placeholder="gits" />
                         <label for="floatingInput">git-server</label>
                     </div>
 
-                    <div class="form-floating mt-3">
-                        <input ref={ss1Ref} type="link" name="img-ss1" class="form-control" id="floatingInput" placeholder="img" />
+                    <div className="form-floating mt-3">
+                        <input ref={ss1Ref} type="link" name="img-ss1" className="form-control" id="floatingInput" placeholder="img" />
                         <label for="floatingInput">img-ss1</label>
                     </div>
 
-                    <div class="form-floating mt-3">
-                        <input ref={ss2Ref} type="link" name="img-ss2" class="form-control" id="floatingInput" placeholder="img" />
+                    <div className="form-floating mt-3">
+                        <input ref={ss2Ref} type="link" name="img-ss2" className="form-control" id="floatingInput" placeholder="img" />
                         <label for="floatingInput">img-ss2</label>
                     </div>
 
-                    <div class="form-floating mt-3">
-                        <input ref={ss3Ref} type="link" name="img-ss3" class="form-control" id="floatingInput" placeholder="img" />
+                    <div className="form-floating mt-3">
+                        <input ref={ss3Ref} type="link" name="img-ss3" className="form-control" id="floatingInput" placeholder="img" />
                         <label for="floatingInput">img-ss3</label>
                     </div>
 

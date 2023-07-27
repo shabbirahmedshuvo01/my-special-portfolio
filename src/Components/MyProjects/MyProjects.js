@@ -18,7 +18,7 @@ const MyProjects = () => {
 
 
     useEffect(() => {
-        fetch('https://shuvo-here-server.vercel.app/project')
+        fetch('https://shuvo-here-server-222.onrender.com/project')
             .then(res => res.json())
             .then(data => setProjects(data))
     }, []);
@@ -31,7 +31,7 @@ const MyProjects = () => {
     return (
         <div className="container mt-5">
             <Fade top>
-                <div className="row text-dark" style={{
+                <div className="row text-dark p-5" style={{
                     marginTop: '50px', backgroundImage: `url('https://img.freepik.com/free-vector/painted-background-multicoloured-palette_23-2148427592.jpg?w=2000')`,
                     backgroundPosition: 'center',
                     backgroundSize: 'cover'

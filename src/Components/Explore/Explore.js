@@ -7,7 +7,7 @@ const Explore = () => {
     const [details, setDetails] = useState([]);
 
     useEffect(() => {
-        const url = `https://shuvo-here-server.vercel.app/project/${detailId}`
+        const url = `https://shuvo-here-server-222.onrender.com/project/${detailId}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -28,8 +28,8 @@ const Explore = () => {
                     <h2 className='text-warning mt-5'>Codes of {details.name}</h2>
                     <br />
                     <h3>GitHub</h3>
-                    <h5>Client Side Code: <span className='text-warning'>Click Here</span> <span><a style={{ color: '#FFFFFF' }} href={details.gitc}><i class="fa fa-github fa-lg"></i></a></span></h5>
-                    <h5>Server Side Code: <span className='text-warning'>Click Here</span> <span><a style={{ color: '#FFFFFF' }} href={details.gits}><i class="fa fa-github fa-lg"></i></a></span></h5>
+                    <h5>Client Side Code: <span className='text-warning'>Click Here</span> <span><a style={{ color: '#FFFFFF' }} href={details.gitc}><i className="fa fa-github fa-lg"></i></a></span></h5>
+                    <h5>Server Side Code: <span className='text-warning'>Click Here</span> <span><a style={{ color: '#FFFFFF' }} href={details.gits}><i className="fa fa-github fa-lg"></i></a></span></h5>
                 </div>
 
             </div>

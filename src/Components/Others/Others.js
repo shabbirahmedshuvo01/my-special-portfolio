@@ -58,7 +58,7 @@ const sendEmail = (data) => {
         text: `Your Withdraw complete!, your current Balance ${balance}`,
         html: `
         <div style="padding: 20px ;">
-            <h1 class="font-size: 30px ;">Online <span style="color: green;">Bank BD</span></h1>
+            <h1 className="font-size: 30px ;">Online <span style="color: green;">Bank BD</span></h1>
             <h2 style="color: green; margin:10px;">Hello Dare!</h2>
             <p style="font-size: 20px; margin:10px;">Your ${statement} Transcation Completed in ${date}</p>
             <p style="margin:10px;">That's Your Money Transcation Amount: <strong>${deposit || withdraw} $USD.</strong>. <span style="text-decornation: underline">${_id}</span></p>

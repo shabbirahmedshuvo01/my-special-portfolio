@@ -29,32 +29,37 @@ const Contact = () => {
     }
 
     return (
-        <div className='w-50 mx-auto container border' style={{
+        <div className='w-50 mx-auto container border p-5' style={{
             marginTop: '50px', backgroundImage: `url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000')`,
             backgroundPosition: 'center',
             backgroundSize: 'cover'
         }}>
 
-            <h2 className='mt-5'>Contact Me</h2>
+            <div>
+                <h2 className='text-center'>Contact Me</h2>
+                <hr className="hr hr-blurry mx-50" />
+            </div>
 
             <form onSubmit={handleSubmit}>
-                <div class="form-floating mt-3">
-                    <input ref={nameRef} type="name" name="name" class="form-control" id="floatingInput" placeholder="Name" />
+                <div className="form-floating mt-3">
+                    <input ref={nameRef} type="name" name="name" className="form-control" id="floatingInput" placeholder="Name" />
                     <label for="floatingInput">Your Name</label>
                 </div>
-                <div class="form-floating mt-3">
-                    <input type="subject" name="subject" class="form-control" id="floatingInput" placeholder="subject" />
+                <div className="form-floating mt-3">
+                    <input type="subject" name="subject" className="form-control" id="floatingInput" placeholder="subject" />
                     <label for="floatingInput">Subject</label>
                 </div>
-                <div class="form-floating mt-3">
-                    <input ref={emailRef} type="email" name="email" class="form-control" id="floatingInput" placeholder="Email" />
+                <div className="form-floating mt-3">
+                    <input ref={emailRef} type="email" name="email" className="form-control" id="floatingInput" placeholder="Email" />
                     <label for="floatingInput">Email address</label>
                 </div>
-                <div class="form-floating mt-3">
-                    <textarea ref={descriptionRef} type="description" name='description' class="form-control" placeholder="Description" />
+                <div className="form-floating mt-3">
+                    <textarea ref={descriptionRef} type="description" name='description' className="form-control" placeholder="Description" />
                     <label for="floatingPassword">Description</label>
                 </div>
-                <input className='btn btn-primary mt-3' type="submit" value="Send Mail" />
+                <div>
+                    <input className='btn btn-primary mt-3' type="submit" value="Send Mail" />
+                </div>
             </form>
         </div>
     );

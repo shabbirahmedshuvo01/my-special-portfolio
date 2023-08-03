@@ -14,8 +14,8 @@ const Projects = ({ project }) => {
             <div className="card" style={{ width: "16rem", height: "25rem" }}>
                 <img className="card-img-top" src={img} alt="" />
                 <div className="card-body">
-                    <h5 className="card-title">{name}</h5>
-                    <p className="card-text">{description}</p>
+                    <h5 className="card-title text-left">{name}</h5>
+                    <p className="card-text fw-semibold mt-5">{description}</p>
                 </div>
                 <div className='btn-group'>
                     <a href={link} className="btn btn-primary btn-sm" >Live site</a>

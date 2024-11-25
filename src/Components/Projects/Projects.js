@@ -46,8 +46,7 @@ const Projects = ({ project }) => {
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-outline-primary btn-sm rounded-pill px-4 py-2"
-            style={{ backgroundColor: "#f8f9fa" }}
+            className="btn btn-outline-primary btn-sm rounded-pill px-4 py-2 live-site-btn"
           >
             Live Site
           </a>

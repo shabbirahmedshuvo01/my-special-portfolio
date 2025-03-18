@@ -1,48 +1,45 @@
-import React, { useEffect, useState } from 'react';
-import Projects from '../Projects/Projects';
-import Fade from 'react-reveal/Fade';
-import pic1 from '../../images/projects/image1 (2).jpg';
-import pic2 from '../../images/projects/image2.jpg';
-import pic3 from '../../images/projects/image3.jpg';
-import Loading from '../Loading/Loading';
+import React, { useEffect, useState } from "react";
+import Projects from "../Projects/Projects";
+import Fade from "react-reveal/Fade";
+import Loading from "../Loading/Loading";
 
 const MyProjects = () => {
-
-    // const projects = [
-    //     { id: 1, name: 'Tools manufacturer', description: "* The project have tools guide  *and add items  * payment system", link: `https://final-project-2bb92.web.app/`, img: pic1 },
-    //     { id: 2, name: 'Warehouse', description: "* The book dealers page. *Add items and remove. *authentication added.", link: `https://eleven-assignment-work.web.app/`, img: pic2 },
-    //     { id: 3, name: 'Single man Service', description: "* A man service provide here,* Booking System.  * responsive", link: `https://my-dev-project63.web.app/`, img: pic3 },
-    // ];
-
     const [projects, setProjects] = useState([]);
-
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('https://shuvo-here-server-222.onrender.com/project')
-            .then(res => res.json())
-            .then(data => setProjects(data))
+        fetch("https://shuvo-here-server-222.onrender.com/project")
+            .then((res) => res.json())
+            .then((data) => {
+                setProjects(data);
+                setLoading(false);
+            })
+            .catch(() => setLoading(false));
     }, []);
-
-    if(true){
-        <Loading/>
-    }
-
 
     return (
         <div className="container mt-5">
             <Fade top>
-                <div className="row text-dark p-5" style={{
-                    marginTop: '50px', backgroundImage: `url('https://img.freepik.com/free-vector/painted-background-multicoloured-palette_23-2148427592.jpg?w=2000')`,
-                    backgroundPosition: 'center',
-                    backgroundSize: 'cover'
-                }}>
-                    <h1 className='text-primary text-center mt-5'> My projects</h1>
-                    {
-                       projects.length === 0 ? <Loading/> : projects.map(project => <Projects key={project._id} project={project} ></Projects>)
-                    }
+                <div
+                    className="p-5 rounded shadow-lg"
+                    style={{
+                        backgroundImage: `url('https://img.freepik.com/free-vector/painted-background-multicoloured-palette_23-2148427592.jpg?w=2000')`,
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
+                    }}
+                >
+                    <h1 className="text-primary text-center mb-4">My Projects</h1>
+                    {loading ? (
+                        <Loading />
+                    ) : (
+                        <div className="row g-4">
+                            {projects.map((project) => (
+                                <Projects key={project._id} project={project} />
+                            ))}
+                        </div>
+                    )}
                 </div>
             </Fade>
-            {/* <Loading/> */}
         </div>
     );
 };

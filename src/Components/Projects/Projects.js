@@ -3,19 +3,18 @@ import { useNavigate } from "react-router-dom";
 
 const Projects = ({ project }) => {
   const { _id, name, description, link, img } = project;
-
   const navigate = useNavigate();
+
   const navigateToDetails = (id) => {
-    navigate(`porject/${id}`);
+    navigate(`/project/${id}`);
   };
 
   return (
-    <div className="g-5 col-sm-12 col-md-6 col-lg-4">
+    <div className="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
       <div
-        className="card shadow-lg rounded-3"
+        className="card shadow-lg rounded-3 w-100"
         style={{
-          width: "18rem",
-          height: "auto",
+          maxWidth: "350px",
           transition: "transform 0.3s ease-in-out",
         }}
         onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
@@ -24,20 +23,12 @@ const Projects = ({ project }) => {
         <img
           className="card-img-top rounded-top"
           src={img}
-          alt=""
+          alt={name}
           style={{ height: "200px", objectFit: "cover" }}
         />
-        <div className="card-body">
-          <h5
-            className="card-title text-left text-dark"
-            style={{ fontFamily: "Arial, sans-serif", fontWeight: "bold" }}
-          >
-            {name}
-          </h5>
-          <p
-            className="card-text fw-normal mt-3"
-            style={{ fontSize: "14px", color: "#6c757d" }}
-          >
+        <div className="card-body text-center">
+          <h5 className="card-title fw-bold">{name}</h5>
+          <p className="card-text text-muted" style={{ fontSize: "14px" }}>
             {description}
           </p>
         </div>
@@ -46,7 +37,7 @@ const Projects = ({ project }) => {
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-outline-primary btn-sm rounded-pill px-4 py-2 live-site-btn"
+            className="btn btn-outline-primary btn-sm rounded-pill px-4 py-2"
           >
             Live Site
           </a>
